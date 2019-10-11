@@ -2,6 +2,8 @@ import React from 'react'
 import scss from "../styles/index.scss"
 import Navi from "../components/navigation.js"
 
+import Link from "next/link"
+
 export default class extends React.Component {
   render() {
     return(
@@ -27,7 +29,9 @@ export default class extends React.Component {
 
         <div className={scss.otherInfo}>
           <div className={scss.info}>企業情報</div>
-          <div className={scss.info}>講師専用画面</div>
+          <Link href="/login">
+            <div className={scss.info}>講師専用画面</div>
+          </Link>
         </div>
       </div>
     )
