@@ -1,0 +1,28 @@
+{
+  "name": "school_front",
+  "version": "1.0.0",
+  "description": "front end of a website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Papillon6814/school_front.git"
+  },
+  "author": "Papillon6814",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Papillon6814/school_front/issues"
+  },
+  "homepage": "https://github.com/Papillon6814/school_front#readme",
+  "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "next": "^9.1.1",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2"
+  }
+}
