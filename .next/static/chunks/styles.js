@@ -1,13 +1,14 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["styles"],{
 
-/***/ "./styles/index.css":
-/*!**************************!*\
-  !*** ./styles/index.css ***!
-  \**************************/
+/***/ "./styles/index.scss":
+/*!***************************!*\
+  !*** ./styles/index.scss ***!
+  \***************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-// extracted by mini-css-extract-plugin;
+// extracted by mini-css-extract-plugin
+module.exports = {"title":"_1lnVWgSkRJhN_zamuhlNJp","navigation":"_1hweepDZJIxcHbRn5mSgGf","navi":"_1VHd1E_ha2AjNNTSih6mxG","appeal":"_3j5rAS0q0n20SPJ5p80cIp","details":"gL4lawUSI86n4GRqgZIfn","det":"_25dx7Gxua0X-liuoajBfws","otherInfo":"_2LeRYk9BemDA0dkcZiv902","info":"_27mOpltB45tMbX88YnvBT2"};;
     if (true) {
       var injectCss = function injectCss(prev, href) {
         var link = prev.cloneNode();
@@ -29,7 +30,7 @@
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1570810684917");
+            injectCss(link, link.href.split("?")[0] + "?unix=1570812421308");
           });
       }
     }
