@@ -4,3 +4,35 @@ body {
   overflow-x: hidden;
 }
 
+table {
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 5px 15px;
+}
+
+.tableArea {
+  position: relative;
+
+  margin-top: 50px;
+
+  width: 90%;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+}
+
+.feeTable {
+  position: relative;
+  margin-top: 50px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+}
