@@ -30,7 +30,7 @@ module.exports = {"title":"_1lnVWgSkRJhN_zamuhlNJp","navigation":"_1hweepDZJIxcH
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1570812421308");
+            injectCss(link, link.href.split("?")[0] + "?unix=1570882831432");
           });
       }
     }
