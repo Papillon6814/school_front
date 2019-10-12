@@ -1,5 +1,5 @@
 import React from 'react'
-import '../styles/kits.css'
+import '../styles/kits.scss'
 
 export default class extends React.Component {
   render() {
