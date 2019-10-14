@@ -2,6 +2,12 @@ import React from 'react'
 import '../styles/kits.scss'
 
 export default class extends React.Component {
+  data = [
+    { text: "aa" },
+    { text: "bb" },
+    { text: "cc" }
+  ]
+
   render() {
     return(
       <div>
@@ -18,8 +24,14 @@ export default class extends React.Component {
 
         <div className="classes">
           <div className="rsrv">
-            <div className="teacher">
-              
+            <div className="subject" onClick='cl("math", 3)'>
+              数学
+            </div>
+
+            <div id="math">
+              {this.data.map((data) => {
+                return <div className="times">{data.text}</div>
+              })}
             </div>
           </div>
         </div>

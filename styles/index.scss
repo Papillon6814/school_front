@@ -27,18 +27,18 @@ body {
   transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
-}
 
-.navigation .navi {
-  float: left;
-  width: 16%;
-  padding: 4vh 0;
-  text-align: center;
-  border: 1px solid #000000;
-  background: #eee;
-  margin-bottom: 10px;
-  font-weight: 200;
-  font-size: 120%;
+  .navi {
+    float: left;
+    width: 16%;
+    padding: 4vh 0;
+    text-align: center;
+    border: 1px solid #000000;
+    background: #eee;
+    margin-bottom: 10px;
+    font-weight: 200;
+    font-size: 120%;
+  }
 }
 
 .appeal {
@@ -83,4 +83,6 @@ body {
   margin: 20px 10%;
   font-weight: 200;
   font-size: 120%;
+
+  cursor: pointer;
 }
