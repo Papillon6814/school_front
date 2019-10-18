@@ -1,72 +1,41 @@
 body {
-  width:100%;
-
-  overflow-x: hidden;
-  padding: 0 5px;
-  margin: 5px auto;
+  padding: 0;
+  margin: 0;
 }
 
-.title {
-  height: 16vh;
-  text-align: center;
-  border-bottom: 1px solid #e3e3e3;
-  background: #eee;
-  padding: 10px;
-  margin-bottom: 10px;
-  font-weight: 200;
-  font-size: 120%;
-}
-
-.navigation {
-  position: relative;
-
-  width: 95%;
-
-  left: 50%;
-
-  transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-
-  .navi {
-    float: left;
-    width: 16%;
-    padding: 4vh 0;
-    text-align: center;
-    border: 1px solid #000000;
-    background: #eee;
-    margin-bottom: 10px;
-    font-weight: 200;
-    font-size: 120%;
-  }
-}
 
 .appeal {
-  border: 1px solid #000000;
-  clear:both;
   width:100%;
   height:15vh;
   text-align: center;
-  background: #eee;
+  line-height: 14vh;
   margin-bottom: 10px;
   font-weight: 200;
-  font-size: 120%;
+  font-size: 220%;
 }
 
 .details {
-  width: 100%;
+  position: relative;
+
+  width: 93%;
+
+  left: 5%;
+
+  .det {
+    border: 1px solid #000000;
+    float: left;
+    width: 30%;
+    height: 17.5vh;
+    text-align: center;
+    background: #eee;
+    font-weight: 200;
+    font-size: 120%;
+
+    margin-left: 1%;
+    margin-top: 1%;
+  }
 }
 
-.det {
-  border: 1px solid #000000;
-  float: left;
-  width: 50%;
-  height: 17.5vh;
-  text-align: center;
-  background: #eee;
-  font-weight: 200;
-  font-size: 120%;
-}
 
 .otherInfo {
   width: 90%;
