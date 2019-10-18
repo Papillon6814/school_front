@@ -1,6 +1,7 @@
 import React from 'react'
 import scss from "../styles/index.scss"
 import Navi from "../components/navigation.js"
+import Footer from "../components/footer.js"
 
 import Link from "next/link"
 
@@ -25,14 +26,12 @@ export default class extends React.Component {
           <div className={scss.det}>⑥不登校や塾通いが苦手な子でも受講可能</div>
         </div>
 
-        <div className="clear:both"></div>
-
-        <div className={scss.otherInfo}>
-          <div className={scss.info}>企業情報</div>
-          <Link href="/login">
-            <div className={scss.info}>講師専用画面</div>
-          </Link>
+        <div className={scss.notification}>
+          当塾からのお知らせ
+          <div classname={scss.whiteRect}></div>
         </div>
+        
+        <Footer/>
       </div>
     )
   }
