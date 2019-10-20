@@ -5,6 +5,7 @@ import Footer from "../components/footer.js"
 
 import Link from "next/link"
 
+import BG from "../static/autumn.png"
 export default class extends React.Component {
   render() {
     return(
@@ -28,9 +29,9 @@ export default class extends React.Component {
 
         <div className={scss.notification}>
           当塾からのお知らせ
-          <div classname={scss.whiteRect}></div>
+          <div className={scss.whiteRect}></div>
         </div>
-        
+
         <Footer/>
       </div>
     )

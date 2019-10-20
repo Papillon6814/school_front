@@ -1,4 +1,6 @@
 const WithSass = require('@zeit/next-sass');
-module.exports = WithSass({
+const WithImages = require('next-images');
+
+module.exports = WithImages(WithSass({
   cssModules: true
-})
+}))
