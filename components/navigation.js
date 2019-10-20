@@ -10,6 +10,9 @@ export default class extends React.Component {
         <Link href="/">
           <div className={scss.title}>
             <div className={scss.navigation}>
+              <div className={scss.name}>
+                オンライン学習塾
+              </div>
               <Link href="/fee">
                 <div className={scss.navi}>料金表</div>
               </Link>

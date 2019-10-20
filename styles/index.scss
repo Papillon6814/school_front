@@ -11,9 +11,9 @@ body {
 
 .appeal {
   width: 100%;
-  height: 15vh;
+  height: 12vh;
   text-align: center;
-  line-height: 14vh;
+  line-height: 12vh;
   margin-bottom: 10px;
   font-weight: 200;
   font-size: 220%;
@@ -32,7 +32,7 @@ body {
     width: 30%;
     height: 17.5vh;
     text-align: center;
-    background: #eee;
+    background: #fff;
     font-weight: 200;
     font-size: 120%;
 
@@ -42,10 +42,6 @@ body {
     transition: .3s;
     cursor: pointer;
     box-shadow: 2px 2px rgba(0, 0, 0, 0.6);
-  }
-
-  .det:hover {
-    box-shadow: 6px 6px rgba(0, 0, 0, 0.6);
   }
 }
 
@@ -67,5 +63,14 @@ body {
     border-style: solid;
     border-width: 1px;
     border-color: #000;
+
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.6);
+
+    transition: .3s;
+    cursor: pointer;
+  }
+
+  .whiteRect:hover {
+    box-shadow: 6px 6px rgba(0, 0, 0, 0.6);
   }
 }
