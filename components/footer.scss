@@ -6,10 +6,50 @@ html {
 .footer {
   position: relative;
 
-  margin-top: 20vh;
+  margin-top: 5vh;
+  padding-top: 4vh;
+  left: 0;
 
   width: 100%;
-  height: 14vh;
+  height: 16vh;
 
   background-color: rgba(30, 30, 168, 0.529);
+
+  .info {
+    position: absolute;
+
+    right: 52%;
+
+    font-size: 23px;
+    color: #fff;
+
+    cursor: pointer;
+  }
+
+  .sep {
+    position: absolute;
+
+    top: 3.8vh;
+    left: 50%;
+
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+
+    text-align: center;
+
+    font-size: 25px;
+    color: #fff;
+  }
+
+  .teacher_login {
+    position: absolute;
+
+    left: 52%;
+
+    font-size: 23px;
+    color: #fff;
+
+    cursor: pointer;
+  }
 }
