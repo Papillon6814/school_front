@@ -1,0 +1,127 @@
+$mainSize:220%;
+$margin:30px;
+
+.title{
+    position: relative;
+    margin:$margin;
+    width:20%;
+    font-size:$mainSize;
+    left:5%;
+    border-bottom:solid 2px #000;
+}
+
+.scrollTeacher{
+    position: relative;
+    margin:$margin;
+    margin:0 auto;
+    width:80%;
+    height: 200px;
+    background:#098;
+}
+
+.scrollLeft{
+    position: relative;
+    display: inline-block;
+    font-size:450%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+}
+
+.teacher{
+    position: relative;
+    margin:0 20px;
+    display:inline-block;
+    width:13%;
+    text-align: center;
+}
+
+.image{
+    border-radius: 50%;
+    background: #000;
+    height:150px;
+    
+}
+
+.name{
+    position: relative;
+    display: inline-block;
+}
+
+.scrollRight{
+    position: relative;
+    display: inline-block;
+    font-size:450%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+}
+
+.calender{
+    margin:0 auto;
+    text-align: center;
+    width:80%;
+}
+
+.calender .title{
+    border:none;
+    width:80%;
+}
+
+
+
+.weeks{
+    position: relative;
+    left:10%;
+    text-align: left;
+}
+
+.week{
+    position: relative;
+    font-size: $mainSize;
+    width:16%;
+    border:solid 1px #000;
+    display: inline-block;
+    border-bottom: double 4px #000;
+    text-align: center;
+}
+
+.times{
+    position: relative;
+    text-align: left;
+}
+
+.classes{
+    position: relative;
+    display: inline-block;
+    width:10%;
+    left:0;
+    text-align: left;
+}
+
+.class{
+    position: relative;
+    display:block;
+    border:solid 1px #000;
+    height:100px;
+    font-size:$mainSize;
+    text-align: center;
+}
+
+.cl{
+    position: absolute;
+    display: inline-block;
+    width:100%;
+}
+
+.time{
+    position: relative;
+    top:0;
+    display: inline-block;
+    border:solid 1px #000;
+    height:100px;
+    width:16%;
+}
+
+
+
