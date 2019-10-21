@@ -7,7 +7,7 @@ export default class extends React.Component {
   render() {
     return(
       <div>
-        {/* <Navi/> */}
+        <Navi/>
 
         <div className={scss.loginField}>
           <div className={scss.loginTitle}>
