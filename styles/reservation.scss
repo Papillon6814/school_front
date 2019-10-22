@@ -1,6 +1,10 @@
 $mainSize:220%;
 $margin:30px;
 
+body{
+    margin:0;
+}
+
 .title{
     position: relative;
     margin:$margin;
@@ -14,9 +18,9 @@ $margin:30px;
     position: relative;
     margin:$margin;
     margin:0 auto;
+    left:5%;
     width:80%;
     height: 200px;
-    background:#098;
 }
 
 .scrollLeft{
@@ -26,20 +30,25 @@ $margin:30px;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
+    cursor: pointer;
+    visibility: hidden;
 }
 
 .teacher{
     position: relative;
-    margin:0 20px;
+    margin:0 5px;
+    padding:0 10px;
     display:inline-block;
     width:13%;
     text-align: center;
+    border:solid 1px #000;
+    border-radius: 10%;
 }
 
 .image{
     border-radius: 50%;
     background: #000;
-    height:150px;
+    height:165px;
     
 }
 
@@ -51,16 +60,20 @@ $margin:30px;
 .scrollRight{
     position: relative;
     display: inline-block;
+    right:0;
     font-size:450%;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
+    cursor: pointer;
 }
 
 .calender{
+    position: relative;
     margin:0 auto;
     text-align: center;
     width:80%;
+    left:-1%
 }
 
 .calender .title{
@@ -121,7 +134,129 @@ $margin:30px;
     border:solid 1px #000;
     height:100px;
     width:16%;
+    cursor: pointer;
 }
 
+.time:hover{
+    background:skyblue
+}
 
+#monday{
+    background: red;
+}
 
+#tuesday{
+    background: blue;
+}
+
+#wednesday{
+    background:yellow;
+}
+
+#thursday{
+    background:pink;
+}
+
+#friday{
+    background:purple;
+}
+
+#saturday{
+    background:yellowgreen;
+}
+
+.pops{
+    position: fixed;
+    display:none;
+    top:0;
+    left:0;
+    background:rgba(0,0,0,0.5);
+    height:100%;
+    width:100%;
+    z-index:10;
+}
+
+.bookSheet{
+    position:relative;
+    margin:0 auto;
+    background:white;
+    width:40%;
+    height:50%;
+    top:25vh;
+}
+
+.cancel{
+    position: relative;
+    margin-right:5px;
+    float: right;
+    top:0;
+    font-size: $mainSize;
+    cursor: pointer;
+}
+
+.sheet{
+    position: relative;
+    top:10%;
+    height: 80%;
+}
+
+.cliant{
+    position: relative;
+    top:6%;
+    left:10%;
+    font-size: $mainSize;
+}
+
+.bookTime{
+    position: relative;
+    top:10%;
+    text-align:center;
+    font-size: $mainSize;
+}
+
+.bookTeacher{
+    position: relative;
+    text-align:right;
+    right:10%;
+    top:10%;
+    font-size: 180%;
+}
+
+.bookText{
+    position: relative;
+    width:100%;
+    text-align:center;
+    margin:0 auto;
+    top:15%;
+    font-size:$mainSize;
+}
+
+.bookButton{
+    position: relative;
+    height: 20%;
+}
+
+.doubleButton{
+    position: relative;
+    width:50%;
+    height:100%;
+    display: inline-block;
+}
+
+.Button{
+    position:relative;
+    font-size: $mainSize;
+    float: left;
+    width:100%;
+    text-align:center;
+    cursor: pointer;
+}
+
+.Button{
+    position: relative;
+    font-size:$mainSize;
+    float: left;
+    width:100%;
+    text-align:center;
+    cursor: pointer;
+}
