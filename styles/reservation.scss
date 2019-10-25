@@ -23,27 +23,106 @@ body{
     height: 200px;
 }
 
+
 .scrollLeft{
     position: relative;
     display: inline-block;
     font-size:450%;
-    transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
     cursor: pointer;
     visibility: hidden;
+    width: 10%;
+    transform: translateY(40%);
+    -webkit-transform: translateY(40%);
+    -moz-transform: translateY(40%);
 }
 
-.teacher{
+.teachers{
     position: relative;
+    width:80%;
+    display: inline-block;
+}
+
+.inTeacher{
+    position: absolute;
+    left: 0;
     margin:0 5px;
     padding:0 10px;
     display:inline-block;
-    width:13%;
+    background: white;
+    width:15%;
     text-align: center;
     border:solid 1px #000;
     border-radius: 10%;
+    transition-duration: 1s;
+    transition-property: left opacity width;
+    transform: translateY(-40%);
+    -webkit-transform: translateY(-40%);
+    -moz-transform: translateY(-40%);
+    opacity: 0;
+    z-index:0;
 }
+$i:0;
+
+.teacher{
+    position: absolute;
+    left:40%;
+    opacity: 0;
+    background: white;
+    margin:0 1%;
+    padding:0 1%;
+    display:inline-block;
+    width:15%;
+    text-align: center;
+    border:solid 1px #000;
+    border-radius: 10%;
+    transition-duration: 1s;
+    transition-property: left;
+    transform: translateY(-40%);
+    -webkit-transform: translateY(-40%);
+    -moz-transform: translateY(-40%);
+}
+
+@while $i < 5{
+.teacher#{$i}{
+    position: absolute;
+    left: (19% * $i);
+    background:white;
+    margin:0 1%;
+    padding:0 1%;
+    width:15%;
+    text-align: center;
+    border:solid 1px #000;
+    border-radius: 10%;
+    transition-duration: 1s;
+    transition-property: left opacity;
+    transform: translateY(-40%);
+    -webkit-transform: translateY(-40%);
+    -moz-transform: translateY(-40%);
+    z-index:$i;
+}
+$i:$i+1;
+}
+
+.outTeacher{
+    position: absolute;
+    left: 76%;
+    margin:0 1%;
+    padding:0 1%;
+    background: white;
+    width:15%;
+    text-align: center;
+    border:solid 1px #000;
+    border-radius: 10%;
+    opacity:0;
+    transition-duration: 1s;
+    transition-property: left opacity;
+    transform: translateY(-40%);
+    -webkit-transform: translateY(-40%);
+    -moz-transform: translateY(-40%);
+    z-index:0;
+}
+
+
 
 .image{
     border-radius: 50%;
@@ -62,10 +141,12 @@ body{
     display: inline-block;
     right:0;
     font-size:450%;
-    transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
     cursor: pointer;
+    z-index:5;
+    width:10%;
+    transform: translateY(40%);
+    -webkit-transform: translateY(40%);
+    -moz-transform: translateY(40%);
 }
 
 .calender{
@@ -79,6 +160,15 @@ body{
 .calender .title{
     border:none;
     width:80%;
+    transition:0;
+    left:0;
+}
+
+.calender .titl{
+    border:solid 1px #000;
+    width:80%;
+    left:10%;
+    transition:3s;
 }
 
 

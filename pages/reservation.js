@@ -15,6 +15,7 @@ export default class extends React.Component {
         this.pop = React.createRef()
         this.array = new Array()
         this.tch = new Array()
+        this.tc = React.createRef()
 
         this.times=["10:00 ~ 11:00","11:00 ~ 12:00","13:00 ~ 14:00","14:00 ~ 15:00"]
 
@@ -25,32 +26,49 @@ export default class extends React.Component {
             }
         }
 
-        for(let i=0;i<5;i++){
+        for(let i=0;i<this.teachers.length;i++){
             this.tch.push(React.createRef())
         }
 
         this.state={
-            max:Math.ceil(this.teachers.length / 5),
-            index:1,
+            start:0,
+            last:5,
             teacherId:0,
             time:0,
-            teacher:this.teachers.slice(0,5)
         }
 
         
     }
 
     componentDidMount(){
-        if(this.state.max == 1){
+        if(this.state.last >= this.teachers.length){
             this.right.current.style.visibility = "hidden"
         }
 
         this.tch[0].current.style.background="red"
+
+        let i
+        for(i=0;i<5;i++){
+            this.tch[i].current.className=scss["teacher"+i]
+        }
+        for(;i<this.teachers.length;i++){
+            this.tch[i].current.className=scss.outTeacher
+        }
     }
 
     LeftClick(){
-        const i = this.state.index - 1
-        if(i <= 1){
+        const i = this.state.start -5
+
+        let j
+        for(let a=0,j=i;j<this.state.start;j++,a++){
+            this.tch[j].current.className = scss["teacher"+a]
+        }
+
+        for(j=this.state.start;j<this.state.last;j++){
+            this.tch[j].current.className = scss.outTeacher
+        }
+
+        if(i == 0){
             this.left.current.style.visibility="hidden" 
         }else{
             this.left.current.style.visibility="visible" 
@@ -59,32 +77,54 @@ export default class extends React.Component {
         this.right.current.style.visibility="visible" 
 
         this.tch[this.state.teacherId].current.style.background = "white"
-        this.tch[0].current.style.background = "red"
+        this.tch[i].current.style.background = "red"
 
         this.setState({
-            index:i,
-            teacherId:0,
-            teacher:this.teachers.slice(0+5*(i-1),5+5*(i-1))
+            teacherId:i,
+            start:i,
+            last:this.state.start
         })
     }
 
     RightClick(){
-        if(this.state.index+1 >= this.state.max){
+        let i = this.state.last + 5
+
+        let j
+        for(j=this.state.start;j<this.state.last;j++){
+            this.tch[j].current.className = scss.inTeacher
+        }
+
+        if(i >= this.teachers.length){
             this.right.current.style.visibility="hidden" 
+
+            for(let a=0;j<this.teachers.length;j++,a++){
+                this.tch[j].current.className = scss["teacher"+a]
+            }
+
+            i=this.teachers.length
         }else{
             this.right.current.style.visibility="visible"
+
+            for(let a=0;j<i;j++,a++){
+                this.tch[j].current.className = scss["teacher"+a]
+            }
         }
         
         this.left.current.style.visibility="visible"
 
+        
+
         this.tch[this.state.teacherId].current.style.background = "white"
-        this.tch[0].current.style.background = "red"
+        this.tch[this.state.last].current.style.background = "red"
         
         this.setState({
-            index:this.state.index+1,
-            teacherId:0,
-            teacher:this.teachers.slice(5+5*(this.state.index-1),10+5*(this.state.index-1))
+            teacherId:this.state.last,
+            start:this.state.last,
+            last: i
         })
+        // this.tc.current.className=scss.teacher
+        // this.tch[0].current.style.display="none"
+        
     }
 
     clickTeacher(id){
@@ -121,17 +161,25 @@ export default class extends React.Component {
 
                     <div className={scss.scrollTeacher}>
                         <div className={scss.scrollLeft} onClick={this.LeftClick.bind(this)} ref={this.left}>＜</div>
-                        {this.state.teacher.map((data,index)=>
+
+                        <div className={scss.teachers}>
+                        {this.teachers.map((data,index)=>
                             <div className={scss.teacher} key={index} onClick={this.clickTeacher.bind(this,index)} ref={this.tch[index]}>
                                 <div className={scss.image}></div>
                                 <div className={scss.name}>{data}</div>
                             </div>
                         )}
+                        </div>
+                        {/* <div className={scss.outTeacher} ref={this.tc}>
+                                <div className={scss.image}></div>
+                                <div className={scss.name}>Out</div>
+                        </div> */}
+                        
                         <div className={scss.scrollRight} onClick={this.RightClick.bind(this)} ref={this.right}>＞</div>
                     </div>
 
                     <div className={scss.calender}>
-                        <div className={scss.title}>〇月　第△週</div>
+                        <div className={scss.title} ref="title">〇月　第△週</div>
                         
                         <div className={scss.wk}>
                             <div className={scss.weeks}>
@@ -173,7 +221,7 @@ export default class extends React.Component {
                             <div className={scss.sheet}>
                                 <div className={scss.cliant}>{this.name}様</div>
                                 <div className={scss.bookTime}>{this.times[this.state.time]}</div>
-                                <div className={scss.bookTeacher}>担当:{this.state.teacher[this.state.teacherId]}</div>
+                                <div className={scss.bookTeacher}>担当:{this.teachers[this.state.teacherId]}</div>
                                 <div className={scss.bookText}>で予約します</div>
                             </div>
                             
