@@ -83,7 +83,6 @@ export default class extends React.Component {
         for(let j=7-this.state.startDay.getDay()-1;j<this.state.lastDay.getDate();j+=7){
             this.months[j].current.style.background="#777"
             this.months[j].current.style.cursor="auto"
-            console.log(j)
         }
     }
 
@@ -210,7 +209,7 @@ export default class extends React.Component {
                     </div>
 
                     <div className={scss.calender}>
-                        <div className={scss.title} ref="title">〇月　第△週{this.today.getDate()}</div>
+                        <div className={scss.title} ref="title">{this.today.getMonth()+1}月</div>
                         
                         <div className={scss.wk}>
                             <div className={scss.weeks}>
