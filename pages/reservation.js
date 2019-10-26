@@ -16,6 +16,7 @@ export default class extends React.Component {
         this.array = new Array()
         this.tch = new Array()
         this.tc = React.createRef()
+        this.months = new Array()
 
         this.times=["10:00 ~ 11:00","11:00 ~ 12:00","13:00 ~ 14:00","14:00 ~ 15:00"]
 
@@ -30,14 +31,37 @@ export default class extends React.Component {
             this.tch.push(React.createRef())
         }
 
+        
+        this.today = new Date()
+        let last = new Date(this.today.getFullYear(),this.today.getMonth()+1,0),
+            start = new Date(this.today.getFullYear(),this.today.getMonth(),0)
+
+        let i,arr = new Array(),nextArr = new Array(),lastArr = new Array();
+        for(let j=0,i=start.getDay();i>=0 && i<5;i--,j++){
+            lastArr.unshift(start.getDate() - j)
+        }
+
+        for(let i=1;i<=last.getDate();i++){
+            arr.push(i)
+            this.months.push(React.createRef())
+        }
+
+        for(let i=last.getDay(),j=1;i<6;i++,j++){
+            nextArr.push(j)
+        }
+
         this.state={
             start:0,
             last:5,
             teacherId:0,
             time:0,
+            lastDay:last,
+            startDay:start,
+            month:arr,
+            lastMonth:lastArr,
+            nextMonth:nextArr,
         }
 
-        
     }
 
     componentDidMount(){
@@ -53,6 +77,13 @@ export default class extends React.Component {
         }
         for(;i<this.teachers.length;i++){
             this.tch[i].current.className=scss.outTeacher
+        }
+
+        this.months[this.today.getDate() - 1].current.style.color="red"
+        for(let j=7-this.state.startDay.getDay()-1;j<this.state.lastDay.getDate();j+=7){
+            this.months[j].current.style.background="#777"
+            this.months[j].current.style.cursor="auto"
+            console.log(j)
         }
     }
 
@@ -179,10 +210,11 @@ export default class extends React.Component {
                     </div>
 
                     <div className={scss.calender}>
-                        <div className={scss.title} ref="title">〇月　第△週</div>
+                        <div className={scss.title} ref="title">〇月　第△週{this.today.getDate()}</div>
                         
                         <div className={scss.wk}>
                             <div className={scss.weeks}>
+                                <div className={scss.week}><div id={scss.sunday}>日</div></div>
                                 <div className={scss.week}><div id={scss.monday}>月</div></div>
                                 <div className={scss.week}><div id={scss.tuesday}>火</div></div>
                                 <div className={scss.week}><div id={scss.wednesday}>水</div></div>
@@ -195,24 +227,32 @@ export default class extends React.Component {
                         
                         <div className={scss.times}>
 
-                        <div className={scss.classes}>
+                        {/* <div className={scss.classes}>
                             <div className={scss.class}>1</div>
                             <div className={scss.class}>2</div>
                             <div className={scss.class}>3</div>
                             <div className={scss.class}>4</div>
-                        </div>
+                        </div> */}
 
-                            <div className={scss.cl}>
-                            {this.array.map((datas,indexs)=>
-                                datas.map((data,index)=>
-                                    <div className={scss.time} key={index} onClick={this.timeClick.bind(this,index,indexs)}>{index}{indexs}</div>
-                            ))}
-                            </div>
+
+                            {this.state.lastMonth.map((data,index)=>
+                                <div className={scss.lastTime} key={index}>{data}</div>
+                            )}
+
+                            {this.state.month.map((data,index)=>
+                                <div className={scss.time} key={index} ref={this.months[index]}>{data}</div>
+                            )}
+
+                            {this.state.nextMonth.map((data,index)=>
+                                <div className={scss.nextTime} key={index}>{data}</div>
+                            )}
                         </div>
 
                     </div>
 
                     <Footer/>
+
+
                     <div className={scss.pops} ref={this.pop}>
                         <div className={scss.bookSheet}>
                             
