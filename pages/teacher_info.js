@@ -56,11 +56,11 @@ export default class extends React.Component {
             <div>
                 <div className={scss.title}>講師情報</div>
                   <div className={scss.buttonPlace}>
-                      <div className={scss.subject} onClick={this.japanese}>国</div>
-                      <div className={scss.subject} onClick={this.math}>数</div>
-                      <div className={scss.subject} onClick={this.science}>理</div>
-                      <div className={scss.subject} onClick={this.social}>社</div>
-                      <div className={scss.subject} onClick={this.english}>英</div>
+                      <div className={scss.japanese} onClick={this.japanese}>国</div>
+                      <div className={scss.math} onClick={this.math}>数</div>
+                      <div className={scss.science} onClick={this.science}>理</div>
+                      <div className={scss.social} onClick={this.social}>社</div>
+                      <div className={scss.english} onClick={this.english}>英</div>
                   </div>
                   <div className={scss.infoPlace}>
                     <div className={scss.teacherInfo}>
