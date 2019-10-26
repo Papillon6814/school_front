@@ -1,0 +1,60 @@
+.title{
+    font-size: 50px;
+    text-decoration-line: underline;
+    border-width: 1px;
+    margin: 20px;
+}
+
+.buttonPlace{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 5%;
+    .subject{
+        border: 1px solid #000000;
+        width: 15vw;
+        height: 15vw;
+        text-align: center;
+        background: #fff;
+        font-weight: 200;
+        font-size: 120%;
+
+        margin-left: 1%;
+
+        transition: .3s;
+        cursor: pointer;
+        box-shadow: 2px 2px rgba(0, 0, 0, 0.6);
+    }
+    .subject:hover{
+        box-shadow: 6px 6px rgba(0, 0, 0, 0.6);
+    }
+}
+
+
+.infoPlace{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .teacherInfo{
+        position: relative;
+        border: 1px solid #000000;
+        width: 70%;
+        height: 50vw;
+        text-align: center;
+        background: #fff;
+        font-weight: 200;
+        font-size: 120%;
+    
+        transition: .3s;
+        cursor: pointer;
+        box-shadow: 2px 2px rgba(0, 0, 0, 0.6);
+    }
+}
+
+.subtitle{
+    width: 100%;
+    background-color: #ff0000;
+    font-size: 50px;
+    text-decoration-line: underline;
+    border-width: 1px;
+}
