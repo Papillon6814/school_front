@@ -11,6 +11,21 @@ export default class extends React.Component {
 
         <div className={scss.login}>
           <div className={scss.title}></div>
+          <div className={scss.id_field}>
+            <div className={scss.id}>
+              生徒ID:
+            </div>
+            <input type="text" />
+          </div>
+          <div className={scss.passwd_field}>
+            <div className={scss.passwd}>
+              パスワード:
+            </div>
+            <input type="text" />
+          </div>
+          <div className={scss.login_button}>
+            ログイン
+          </div>
         </div>
         <Footer/>
       </div>
