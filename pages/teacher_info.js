@@ -65,6 +65,30 @@ export default class extends React.Component {
                   <div className={scss.infoPlace}>
                     <div className={scss.teacherInfo}>
                       <div id='bgcolor' className={scss.subtitle}>{sub}</div>
+                      <div className={scss.photoPlace}>
+                        {/* Start */}
+                        <div className={scss.item}>
+                          <div className={scss.cir}></div>
+                          <div>User_Info</div>
+                        </div>
+                        <div className={scss.item}>
+                          <div className={scss.cir}></div>
+                          <div>User_Info</div>
+                        </div>
+                        <div className={scss.item}>
+                          <div className={scss.cir}></div>
+                          <div>User_Info</div>
+                        </div>
+                        <div className={scss.item}>
+                          <div className={scss.cir}></div>
+                          <div>User_Info</div>
+                        </div>
+                        <div className={scss.item}>
+                          <div className={scss.cir}></div>
+                          <div>User_Info</div>
+                        </div>
+                        {/* End */}
+                      </div>
                     </div>
                   </div>
             </div>
