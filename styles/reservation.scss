@@ -1,18 +1,31 @@
 $mainSize:2.8vw;
 $margin:30px;
-$calenderSize:12.7vw;
+$calenderSize:12vw;
 
 body{
     margin:0;
 }
 
 .title{
+@media screen and (max-width:600px){
+    position: relative;
+    margin:$margin auto;
+    width:40%;
+    font-size:6vw;
+    text-align: center;
+    border-bottom:solid 2px #000;
+}
+
+@media screen and (min-width:600px){
+
     position: relative;
     margin:$margin;
     width:20%;
     font-size:$mainSize;
     left:5%;
     border-bottom:solid 2px #000;
+    
+}
 }
 
 .scrollTeacher{
@@ -161,33 +174,41 @@ $i:$i+1;
 }
 
 .calender .title{
-    border:none;
-    width:80%;
+    width:20%;
     transition:0;
     left:0;
     margin:0 auto;
+    margin-bottom:10px;
 }
 
 .weeks{
     position: relative;
-    text-align: left;
+    text-align: center;
     width:95vw;
+    font-size: 0;
 }
 
 .week{
     position: relative;
     font-size: $mainSize;
     width:$calenderSize;
-    border:solid 1px #000;
     display: inline-block;
-    border-bottom: double 4px #000;
     text-align: center;
+    @media screen and (max-width:600px) {
+        border:solid 0.5px #000;
+        border-bottom: double 2px #000;
+    }
+    @media screen and (min-width:600px) {
+        border:solid 1px #000;
+        border-bottom: double 4px #000;
+    }
 }
 
 .times{
     position: relative;
-    text-align: left;
+    text-align: center;
     width:100%;
+    font-size:0;
 }
 
 .classes{
@@ -212,35 +233,57 @@ $i:$i+1;
     display: inline-block;
 }
 
+$fsize:2.5vw;
+
 .lastTime{
     position: relative;
     top:0;
     display: inline-block;
-    border:solid 1px #000;
-    height:13vw;
+    border:solid 0.5px #000;
+    height:8vw;
     width:$calenderSize;
     background: #777;
+    font-size:$fsize;
+    @media screen and (max-width:600px) {
+        border:solid 0.5px #000;
+    }
+    @media screen and (min-width:600px) {
+        border:solid 1px #000;
+    }
 }
 
 .time{
     position: relative;
     top:0;
     display: inline-block;
-    border:solid 1px #000;
-    height:13vw;
+    border:solid 0.5px rgb(112, 110, 110);
+    height:8vw;
     width:$calenderSize;
     background:white;
     cursor: pointer;
+    font-size:$fsize;
+    @media screen and (max-width:600px) {
+        border:solid 0.5px #000;
+    }
+    @media screen and (min-width:600px) {
+        border:solid 1px #000;
+    }
 }
 
 .nextTime{
     position: relative;
     top:0;
     display: inline-block;
-    border:solid 1px #000;
-    height:13vw;
+    height:8vw;
     width:$calenderSize;
     background: #777;
+    font-size:$fsize;
+    @media screen and (max-width:600px) {
+        border:solid 0.5px #000;
+    }
+    @media screen and (min-width:600px) {
+        border:solid 1px #000;
+    }
 }
 
 .time:hover{
@@ -366,3 +409,4 @@ $i:$i+1;
     text-align:center;
     cursor: pointer;
 }
+
