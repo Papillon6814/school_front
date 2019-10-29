@@ -1,0 +1,416 @@
+$mainSize:2.8vw;
+$margin:30px;
+$calenderSize:12vw;
+
+body{
+    margin:0;
+}
+
+.title{
+@media screen and (max-width:600px){
+    position: relative;
+    margin:$margin auto;
+    width:40%;
+    font-size:6vw;
+    text-align: center;
+    border-bottom:solid 2px #000;
+}
+
+@media screen and (min-width:600px){
+
+    position: relative;
+    margin:$margin;
+    width:20%;
+    font-size:$mainSize;
+    left:5%;
+    border-bottom:solid 2px #000;
+    
+}
+}
+
+.scrollTeacher{
+    position: relative;
+    margin:$margin;
+    margin:0 auto;
+    width:90%;
+    height: 20vw;
+}
+
+.scrollLeft{
+    position: relative;
+    display: inline-block;
+    font-size:6vw;
+    cursor: pointer;
+    visibility: hidden;
+    width: 10%;
+    text-align: center;
+    transform: translateY(40%);
+    -webkit-transform: translateY(40%);
+    -moz-transform: translateY(40%);
+}
+
+.teachers{
+    position: relative;
+    width:80%;
+    display: inline-block;
+    left:2%;
+}
+
+.inTeacher{
+    position: absolute;
+    left: 0;
+    margin:0 5px;
+    padding:0 10px;
+    display:inline-block;
+    background: white;
+    width:15%;
+    text-align: center;
+    border:solid 1px #000;
+    border-radius: 10%;
+    transition-duration: 1s;
+    transition-property: left opacity width;
+    transform: translateY(-40%);
+    -webkit-transform: translateY(-40%);
+    -moz-transform: translateY(-40%);
+    opacity: 0;
+    z-index:0;
+}
+$i:0;
+
+.teacher{
+    position: absolute;
+    left:40%;
+    opacity: 0;
+    background: white;
+    margin:0 1%;
+    padding:0 1%;
+    display:inline-block;
+    width:15%;
+    text-align: center;
+    border:solid 1px #000;
+    border-radius: 10%;
+    transition-duration: 1s;
+    transition-property: left;
+    transform: translateY(-40%);
+    -webkit-transform: translateY(-40%);
+    -moz-transform: translateY(-40%);
+}
+
+@while $i < 5{
+.teacher#{$i}{
+    position: absolute;
+    left: (19% * $i);
+    background:white;
+    margin:0 1%;
+    padding:0 1%;
+    width:15%;
+    text-align: center;
+    border:solid 1px #000;
+    border-radius: 10%;
+    transition-duration: 1s;
+    transition-property: left opacity;
+    transform: translateY(-40%);
+    -webkit-transform: translateY(-40%);
+    -moz-transform: translateY(-40%);
+    z-index:$i;
+}
+$i:$i+1;
+}
+
+.outTeacher{
+    position: absolute;
+    left: 76%;
+    margin:0 1%;
+    padding:0 1%;
+    background: white;
+    width:15%;
+    text-align: center;
+    border:solid 1px #000;
+    border-radius: 10%;
+    opacity:0;
+    transition-duration: 1s;
+    transition-property: left opacity;
+    transform: translateY(-40%);
+    -webkit-transform: translateY(-40%);
+    -moz-transform: translateY(-40%);
+    z-index:0;
+}
+
+
+
+.image{
+    margin:0 2%;
+    border-radius: 50%;
+    background: #000;
+    height:15vw;
+}
+
+.name{
+    position: relative;
+    display: inline-block;
+    font-size:1.8vw;
+}
+
+.scrollRight{
+    position: relative;
+    display: inline-block;
+    right:0;
+    font-size:6vw;
+    cursor: pointer;
+    z-index:5;
+    width:10%;
+    text-align: center;
+    transform: translateY(40%);
+    -webkit-transform: translateY(40%);
+    -moz-transform: translateY(40%);
+}
+
+.calender{
+    position: relative;
+    margin:0 auto;
+    text-align: center;
+    width:95vw;
+    margin-top:10px;
+}
+
+.calender .title{
+    width:20%;
+    transition:0;
+    left:0;
+    margin:0 auto;
+    margin-bottom:10px;
+}
+
+.weeks{
+    position: relative;
+    text-align: center;
+    width:95vw;
+    font-size: 0;
+}
+
+.week{
+    position: relative;
+    font-size: $mainSize;
+    width:$calenderSize;
+    display: inline-block;
+    text-align: center;
+    @media screen and (max-width:600px) {
+        border:solid 0.5px #000;
+        border-bottom: double 2px #000;
+    }
+    @media screen and (min-width:600px) {
+        border:solid 1px #000;
+        border-bottom: double 4px #000;
+    }
+}
+
+.times{
+    position: relative;
+    text-align: center;
+    width:100%;
+    font-size:0;
+}
+
+.classes{
+    position: relative;
+    display: inline-block;
+    width:10%;
+    left:0;
+    text-align: left;
+}
+
+.class{
+    position: relative;
+    display:block;
+    border:solid 1px #000;
+    height:100px;
+    font-size:$mainSize;
+    text-align: center;
+}
+
+.cl{
+    position: absolute;
+    display: inline-block;
+}
+
+$fsize:2.5vw;
+
+.lastTime{
+    position: relative;
+    top:0;
+    display: inline-block;
+    border:solid 0.5px #000;
+    height:8vw;
+    width:$calenderSize;
+    background: #777;
+    font-size:$fsize;
+    @media screen and (max-width:600px) {
+        border:solid 0.5px #000;
+    }
+    @media screen and (min-width:600px) {
+        border:solid 1px #000;
+    }
+}
+
+.time{
+    position: relative;
+    top:0;
+    display: inline-block;
+    border:solid 0.5px rgb(112, 110, 110);
+    height:8vw;
+    width:$calenderSize;
+    background:white;
+    cursor: pointer;
+    font-size:$fsize;
+    @media screen and (max-width:600px) {
+        border:solid 0.5px #000;
+    }
+    @media screen and (min-width:600px) {
+        border:solid 1px #000;
+    }
+}
+
+.nextTime{
+    position: relative;
+    top:0;
+    display: inline-block;
+    height:8vw;
+    width:$calenderSize;
+    background: #777;
+    font-size:$fsize;
+    @media screen and (max-width:600px) {
+        border:solid 0.5px #000;
+    }
+    @media screen and (min-width:600px) {
+        border:solid 1px #000;
+    }
+}
+
+.time:hover{
+    background:skyblue
+}
+
+#sunday{
+    background: white;
+}
+
+#monday{
+    background: red;
+}
+
+#tuesday{
+    background: blue;
+}
+
+#wednesday{
+    background:yellow;
+}
+
+#thursday{
+    background:pink;
+}
+
+#friday{
+    background:purple;
+}
+
+#saturday{
+    background:yellowgreen;
+}
+
+.pops{
+    position: fixed;
+    display:none;
+    top:0;
+    left:0;
+    background:rgba(0,0,0,0.5);
+    height:100%;
+    width:100%;
+    z-index:10;
+}
+
+.bookSheet{
+    position:relative;
+    margin:0 auto;
+    background:white;
+    width:40%;
+    height:50%;
+    top:25vh;
+}
+
+.cancel{
+    position: relative;
+    margin-right:5px;
+    float: right;
+    top:0;
+    font-size: $mainSize;
+    cursor: pointer;
+}
+
+.sheet{
+    position: relative;
+    top:10%;
+    height: 80%;
+}
+
+.cliant{
+    position: relative;
+    top:6%;
+    left:10%;
+    font-size: $mainSize;
+}
+
+.bookTime{
+    position: relative;
+    top:10%;
+    text-align:center;
+    font-size: $mainSize;
+}
+
+.bookTeacher{
+    position: relative;
+    text-align:right;
+    right:10%;
+    top:10%;
+    font-size: 180%;
+}
+
+.bookText{
+    position: relative;
+    width:100%;
+    text-align:center;
+    margin:0 auto;
+    top:15%;
+    font-size:$mainSize;
+}
+
+.bookButton{
+    position: relative;
+    height: 20%;
+}
+
+.doubleButton{
+    position: relative;
+    width:50%;
+    height:100%;
+    display: inline-block;
+}
+
+.Button{
+    position:relative;
+    font-size: $mainSize;
+    float: left;
+    width:100%;
+    text-align:center;
+    cursor: pointer;
+}
+
+.Button{
+    position: relative;
+    font-size:$mainSize;
+    float: left;
+    width:100%;
+    text-align:center;
+    cursor: pointer;
+}
+
