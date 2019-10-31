@@ -7,7 +7,7 @@ export default class extends React.Component {
   render() {
     return(
       <div className={scss.footer}>
-        <Link href="../pages/info.js">
+        <Link href="info">
           <div className={scss.info}>
             企業情報
           </div>
@@ -15,7 +15,7 @@ export default class extends React.Component {
         <div className={scss.sep}>
           |
         </div>
-        <Link href="../pages/teacher_login.js">
+        <Link href="teacher_login">
           <div className={scss.teacher_login}>
             講師専用ログイン
           </div>

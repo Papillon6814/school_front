@@ -18,11 +18,15 @@ export default class extends React.Component {
             <div className={scss.verticalLine}></div>
             <div className={scss.navi}>諸経費</div>
             <div className={scss.verticalLine}></div>
-            <div className={scss.navi}>講師情報</div>
+            <Link href="teacher_info">
+              <div className={scss.navi}>講師情報</div>
+            </Link>
             <div className={scss.verticalLine}></div>
             <div className={scss.navi}>受講までの流れ</div>
             <div className={scss.verticalLine}></div>
-            <div className={scss.navi}>予約画面</div>
+            <Link href="reservation">
+              <div className={scss.navi}>予約画面</div>
+            </Link>
             <div className={scss.verticalLine}></div>
             <Link href="/member">
               <div className={scss.navi}>ログイン</div>

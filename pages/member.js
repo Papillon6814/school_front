@@ -10,7 +10,11 @@ export default class extends React.Component {
         <Navi/>
 
         <div className={scss.login}>
-          <div className={scss.title}></div>
+          <div className={scss.title}>
+            <div className={scss.title_word}>
+              <u>ログイン</u>
+            </div>
+          </div>
           <div className={scss.id_field}>
             <div className={scss.id}>
               生徒ID:

@@ -1,3 +1,5 @@
+@import "../colors/index.scss";
+
 html {
   margin: 0;
   padding: 0;
@@ -15,10 +17,10 @@ body {
   padding-top: 4vh;
   right: 5px;
 
-  width: 100%;
+  width: calc(100% + 5px);
   height: 16vh;
 
-  background-color: rgba(30, 30, 168, 0.529);
+  background-color: $footer;
 
   .info {
     position: absolute;
