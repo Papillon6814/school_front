@@ -1,0 +1,142 @@
+@import "../colors/index.scss";
+
+body {
+  overflow-x: hidden;
+}
+
+.login {
+  position: relative;
+
+  left: 50%;
+  margin-top: 70px;
+
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+
+  width: 75vw;
+  height: 60vh;
+
+  transition: .3s;
+
+  background: $teacher_login_bg;
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.6);
+
+  .title {
+    position: relative;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 25%;
+
+    background: $teacher_login_header;
+
+    .title_word {
+      position: absolute;
+
+      top: 30%;
+      left: 5%;
+
+      font-size: 55px;
+      font-family: "UD Digi Kyokasho N-R";
+    }
+  }
+
+  .id_field {
+    position: relative;
+
+    left: 35%;
+    top: 60px;
+
+    width: 80%;
+    height: 50px;
+
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+
+    .id {
+      position: absolute;
+
+      right: 60%;
+      font-size: 45px;
+
+      text-align: right;
+    }
+
+    input {
+      position: absolute;
+
+      right: 0;
+
+      width: 50%;
+      height: 50px;
+
+      font-size: 45px;
+    }
+  }
+
+  .passwd_field {
+    position: relative;
+
+    top: 120px;
+    left: 35%;
+
+    width: 80%;
+    height: 50px;
+
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+
+    .passwd {
+      position: absolute;
+
+      right: 60%;
+      font-size: 45px;
+
+      text-align: right;
+    }
+
+    input  {
+      position: absolute;
+
+      right: 0;
+
+      width: 50%;
+      height: 50px;
+
+      font-size: 45px;
+    }
+  }
+
+  .login_button {
+    position: absolute;
+
+    height: 80px;
+    width: 35%;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+
+    line-height: 80px;
+    font-size: 35px;
+    color: #fff;
+
+    bottom: 60px;
+
+    background: radial-gradient(#5a80c9, $teacher_login_button);
+
+    text-align: center;
+    cursor: pointer;
+  }
+}
+
+.login:hover {
+  box-shadow: 6px 6px rgba(0, 0, 0, 0.6);
+}

@@ -1,6 +1,11 @@
-$mainSize:2.8vw;
-$margin:30px;
-$calenderSize:12vw;
+$mainSize: 2.8vw;
+$margin: 30px;
+$calenderSize: 12vw;
+
+html {
+    background-image: url("../static/autumn.png");
+}
+
 
 body{
     margin:0;

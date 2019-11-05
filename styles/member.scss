@@ -1,5 +1,9 @@
 @import "../colors/index.scss";
 
+html {
+  background-image: url("../static/autumn.png");
+}
+
 body {
   overflow-x: hidden;
 }
